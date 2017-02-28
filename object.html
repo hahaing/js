@@ -1,12 +1,56 @@
 <html>
 	<head>
 		<script>
+			'use strict';
 			//alert('hello,world');
+		    function string2int(s){
+				var arr=[];   
+				for(var i=0;i<s.length;i++){
+					arr[i] = Number(s[i]);
+				}
+				arr.map(String);
+				console.log(arr);
+				
+				return arr.reduce(function(x,y){
+					console.log(x);
+					console.log(y);
+					return x*10 + y;
+				})
+			}
+			function pow(x){
+				return x * x;
+			}
+			alert(string2int('12345'));
+			var arr = [10, 20, 1, 2];
+			arr.map(pow);
+			console.log(arr);
+			var r, arr2 = ['apple', 'strawberry', 'banana', 'pear', 'apple'];
+			r = arr2.filter(function(element, index, self){
+				console.log(element);
+				console.log(index);
+				console.log(self);
+				console.log(self[index]);
+				return self.indexOf(element) == index;
+			})
+			console.log(r);
+			console.log(arr.sort(function(s1,s2){
+				if(s1 < s2){
+					return -1;
+				}
+				if(s1 > s2){
+					return 1;
+				}
+				if(s1 == s2){
+					return 0;
+				}
+				
+			}
+			
+			));
 		</script>
 	</head>
 	
 	<body>
-		<h1> zyw1111</h1>
-		<h1> zyw222</h1>
+		<span id="name"> zyw</span>
 	</body>
 </html>
