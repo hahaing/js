@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<script src='jquery.js'></script>
+		<script>
+			function test(t2){
+				t2.href = "http://www.douyu.com";
+				t2.innerHTML = 'ZYW';
+			}
+			function test2(){
+				$("a").attr('href','http://www.marsplus.cn');
+			}
+
+		</script>
+		<script>
+		$(document).ready(function(){
+				$('a').on('click',function(){
+						$(this).text('2222');
+					}
+				)
+			}		
+		)
+		</script>
+		<script>
+		$(function(){
+				$('a').on('click',function(){
+					$(this).prepend('<p>1111</p>');
+					$(this).append('<p>2222</p>');
+					$(this).after('<p>333</p>');
+				}
+			)
+		})
+		
+		</script>
+
+	</head>
+	<body>
+		<a href="http://www.baidu.com" target="_blank" id="test" onclick="test2()"> 111111</a>
+	</body>
+</html>
